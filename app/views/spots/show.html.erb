@@ -1,0 +1,39 @@
+<div class="result-wrapper">
+  
+  <div class="intoro text-center">
+    <h5>✨ 診断結果 ✨</h5>
+    <p>あなたにおすすめの横浜スポットは…</p>
+  </div>
+
+  <div class="spot-container shadow-sm">
+    <h2 class="spot-name"><%= @yokohama.name %></h2>
+    
+    <div class="spot-tags">
+      <span class="tag-time">🕒 <%= @yokohama.time_zone %></span>
+      <span class="tag-category">💡 <%= @yokohama.category %></span>
+    </div>
+
+    <% if @yokohama.image_url.present? %>
+      <div class="spot-image-wrapper">
+        <img src="<%= @yokohama.image_url %>" alt="<%= @yokohama.name %>" class="spot-image">
+      </div>
+    <% end %>
+
+    <div class="spot-description">
+      <h5>📌 どんなところ？</h5>
+      <p><%= @yokohama.description %></p>
+    </div>
+    
+    <% if @yokohama.access.present? %>
+      <div class="spot-access">
+        <h5>🚶‍♂️ 行き方（アクセス）</h5>
+        <p><%= @yokohama.access %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="back-to-diagnose text-center">
+    <%= link_to "もう一度診断する", new_spot_path, class: "btn-retry" %>
+  </div>
+
+</div>

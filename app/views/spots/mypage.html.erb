@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <h2>👤 マイページ（お気に入り一覧）</h2>
+
+    <%= link_to "🔍 スポット一覧へ戻る", search_spots_path %>
+  </div>
+
+  <hr>
+
+  <% if @bookmarked_spots.empty? %>
+    <p>お気に入りしたスポットはまだありません。一覧からハートを押してみてね！</p>
+  <% else %>
+    <div class="row">
+      <% @bookmarked_spots.each do |yokohama| %>
+        <div class="col-md-4 mb-4" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px;">
+          
+            <%= button_to "❤️ お気に入り解除", spot_bookmarks_path(yokohama), method: :delete %>
+          </div>
+
+          <%= link_to spot_path(yokohama) do %>
+            <div class="card">
+              <img src="<%= yokohama.image_url %>" alt="<%= yokohama.name %>" style="height: 150px; object-fit: cover; width: 100%;">
+              <div class="card-body">
+                <h5><%= yokohama.name %></h5>
+              </div>
+            </div>
+          <% end %>
+
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

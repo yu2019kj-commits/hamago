@@ -1,0 +1,12 @@
+<h1>hamago</h1>
+<h3>一覧ページ</h3>
+<%= link_to "新規投稿へ", new_Tweet_path %>
+<div class="tweets-container">
+  <% @tweets.each do |t| %>
+    <div class="tweet">
+      <%= t.title %>
+      <%= t.contents %>
+      <%= t.image %>
+    </div>
+  <% end %>
+</div>

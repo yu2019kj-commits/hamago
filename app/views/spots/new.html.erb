@@ -1,0 +1,48 @@
+<h2>🔮 横浜行き先診断 🔮</h2>
+
+<div style="margin: 15px 0; gap: 15px; display: flex;">
+  <%= link_to "🔍 診断せずにスポット一覧を見る", search_spots_path %>
+  <%= link_to "👤 マイページ（お気に入り一覧）へ", mypage_path %>
+</div>
+
+<hr>
+
+<%= form_with url: calculate_spots_path, method: :post, local: true do |f| %>
+  <div class="spot-container">
+
+    <div class="col-12">
+      <p>Q1. 何時ごろのお出かけ？</p>
+    </div>
+    <div class="col-6">
+      <%= f.radio_button :time_zone, "1", id: "time_1" %>
+      <label for="time_1">朝</label>
+
+      <%= f.radio_button :time_zone, "2", id: "time_2" %>
+      <label for="time_2">昼</label>
+
+      <%= f.radio_button :time_zone, "3", id: "time_3" %>
+      <label for="time_3">夜</label>
+    </div>
+
+    <div class="col-12">
+      <p>Q2. 今日は何をしたい？</p>
+    </div>
+    <div class="col-6">
+      <%= f.radio_button :category, "1", id: "cat_1" %>
+      <label for="cat_1">散歩したい</label>
+
+      <%= f.radio_button :category, "2", id: "cat_2" %>
+      <label for="cat_2">思いっきり遊びたい</label>
+
+      <%= f.radio_button :category, "3", id: "cat_3" %>
+      <label for="cat_3">静かに過ごしたい</label>  
+
+      <%= f.radio_button :category, "4", id: "cat_4" %>
+      <label for="cat_4">買い物したい</label>
+    </div>
+
+  </div>
+  <div class="sindanbotan">
+    <%= f.submit "結果" %>
+  </div>
+<% end %>

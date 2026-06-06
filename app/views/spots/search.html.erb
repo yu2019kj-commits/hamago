@@ -1,0 +1,45 @@
+<div class="container mt-5">
+  <h2>🔍 スポットを探す</h2>
+    <%= link_to "🔮 横浜行き先診断をやってみる", root_path %>
+    <%= link_to "👤 マイページ（お気に入り一覧）へ", mypage_path %>
+  </div>
+
+  <div class="search-form-wrapper">
+    <%= form_with url: search_spots_path, method: :get, local: true do |f| %>
+      <div>
+        <%= f.select :search_time, [["朝のお出かけ", "朝"], ["昼のお出かけ", "昼"], ["夜のお出かけ", "夜"]], { include_blank: "すべての時間帯から探す", selected: params[:search_time] } %>
+        <%= f.submit "検索する" %>
+      </div>
+    <% end %>
+  </div>
+
+  <hr>
+
+  <div class="row">
+    <% @yokohamas.each do |yokohama| %>
+      <div class="col-md-4 mb-4" style="border: 1px solid #ccc; padding: 15px; margin-bottom: 10px;">
+        
+        <div class="bookmark-button-box" style="margin-bottom: 10px;">
+          <% if Bookmark.exists?(yokohama_id: yokohama.id) %>
+            <%= button_to "❤️ お気に入り解除", spot_bookmarks_path(yokohama), method: :delete %>
+          <% else %>
+            <%= button_to "♡ お気に入り登録", spot_bookmarks_path(yokohama), method: :post %>
+          <% end %>
+        </div>
+
+        <%= link_to spot_path(yokohama), class: "text-decoration-none text-dark" do %>
+          <div class="card">
+            <img src="<%= yokohama.image_url %>" alt="<%= yokohama.name %>" style="height: 200px; object-fit: cover; width: 100%;">
+            <div class="card-body">
+              <span>🕒 <%= yokohama.time_zone %></span>
+              <span>💡 <%= yokohama.category %></span>
+              <h5><%= yokohama.name %></h5>
+              <p><%= yokohama.description.truncate(50) %></p>
+            </div>
+          </div>
+        <% end %> 
+
+      </div> 
+    <% end %> 
+  </div> 
+</div>
