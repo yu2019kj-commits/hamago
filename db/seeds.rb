@@ -8,7 +8,7 @@ Yokohama.create!([
     access: "みなとみらい線「元町・中華街駅」から徒歩3分 / 「日本大通り駅」から徒歩5分",
     time_zone: "朝",
     category: "散歩したい",
-    image_url: "https://ycvb.yokohama/img_data/d190.jpg"
+    image_url: "https://travel.mar-ker.com/wp-content/images/sites/6/2016/07/yamashitz-park.jpg"
   },
   {
     name: "コスモワールド",
@@ -48,7 +48,7 @@ Yokohama.create!([
     access: "みなとみらい線「元町・中華街駅」すぐ",
     time_zone: "昼",
     category: "思いっきり遊びたい",
-    image_url: "https://tse3.mm.bing.net/th/id/OIP.Ip5RWIcnkVIvCpEixwA8WQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+    image_url: "https://sozai-free.com/wp-content/uploads/2021/06/crw_0952_jfr-1536x1020.jpg"
   },
   {
     name: "横浜美術館",
@@ -56,7 +56,7 @@ Yokohama.create!([
     access: "みなとみらい線「みなとみらい駅」すぐ",
     time_zone: "昼",
     category: "静かに過ごしたい",
-    image_url: "https://tse2.mm.bing.net/th/id/OIP.oL7K0QbwMnI2ygWmN4XIFAHaDe?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+    image_url: "https://yokohama.osusumewa.jp/images/culture/y_museum1.jpg"
   },
   {
     name: "赤レンガ倉庫",
@@ -64,15 +64,14 @@ Yokohama.create!([
     access: "みなとみらい線「馬車道駅」または「日本大通り駅」から徒歩6分",
     time_zone: "昼",
     category: "買い物したい",
-    image_url: "https://tse4.mm.bing.net/th/id/OIP.PLzRzG120bW00lGLqtSoRgHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
-  },
+    image_url: "https://s3-ap-northeast-1.amazonaws.com/thegate/2021/02/12/17/17/31/Yokohama-Red-Brick-Warehouse.jpg"  },
   {
     name: "汽車道",
     description: "ライトアップされた観覧車を間近で見上げるロマンチックな遊歩道。万国橋からの逆さ夜景は息をのむ美しさ！",
     access: "JR「桜木町駅」から徒歩5分",
     time_zone: "夜",
     category: "散歩したい",
-    image_url: "https://tse4.mm.bing.net/th/id/OIP.NI3E-9Y1T5LM6U2kaLan8AHaE7?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+    image_url: "https://www.datocms-assets.com/101439/1721111395-kishamichi-promenade.jpg?auto=format&fit=max&w=1200"
   },
   {
     name: "夜のコスモワールド", 
@@ -80,7 +79,7 @@ Yokohama.create!([
     access: "みなとみらい線「みなとみらい駅」から徒歩約10分",
     time_zone: "夜",
     category: "思いっきり遊びたい",
-    image_url: "https://skyticket.jp/guide/wp-content/uploads/pixta_37393262_M-min-680x383.jpg"
+    image_url: "https://ycvb.yokohama/img_data/spot_sub199_1.jpg"
   },
   {
     name: "象の鼻パーク",
@@ -88,7 +87,7 @@ Yokohama.create!([
     access: "みなとみらい線「日本大通り駅」から徒歩3分",
     time_zone: "夜",
     category: "静かに過ごしたい",
-    image_url: "https://tse4.mm.bing.net/th/id/OIP.lbhapJbe1KxYETM6xHFpwQHaE8?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+    image_url: "https://www.k-atl.com/wp-content/uploads/2025/03/zh10-1024x681.jpg"
   },
   {
     name: "ニューマン",

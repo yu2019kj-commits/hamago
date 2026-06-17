@@ -18,6 +18,19 @@
   </head>
 
   <body>
-    <%= yield %>
-  </body>
-</html>
+    <header class="site-header">
+      <div class="header-container">
+        <%= link_to "hamago", root_path, class: "header-logo" %>
+        
+        <nav class="header-nav">
+          <%= link_to "行き先診断", new_spot_path, class: "nav-item" %>
+          <%= link_to "スポット検索", search_spots_path, class: "nav-item" %>
+          <%= link_to "マイページ", mypage_path, class: "nav-item" %>
+        </nav>
+      </div>
+    </header>
+    <div class="main-content">
+      <%= yield %>
+      </div>
+     </body>
+   </html>
